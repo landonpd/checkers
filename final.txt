@@ -1,0 +1,27 @@
+TITLE: 
+Landon Dixon, CSCI 261 section D Checkers
+
+PROBLEM DESCRIPTION:
+I will be creating a version of checkers played by two players in a graphical window implemented via SFML.
+The board is white and brown and the pieces are black and red. The players
+ play checkers regularly except you can not chain jumps. A file is created with stats when the game is over. 
+
+PROGRAM DOCUMENTATION:
+To play this game just click on the piece you want to move then click on where you want it to move to. There are checks to make sure you don't move your piece somewhere it can't go. You win by jumping all of the opponents pieces.
+If another programmer were to try and modify or extend my program I would first make it possible to chain jumps. This might be done by finding if there is more jumps possible then having the user choose to chain the jumps or not by left clicking when they are done chaining jumps. 
+I would also make sure that when a piece selected there is a way to deselect it, such as left clicking, to make sure you can't get stuck by accidentially selecting a piece that can not move.
+
+DATA STRUCTURE:
+I used vectors (arrays) to keep track of the pieces and the squares. This allowed me to draw the pieces by drawing everything in the list, and to allow me to remove pieces that have been jumped by removing them from the list.
+A vector/array was choosen for both because the max size of both was known, and the squares was static as nothing would be added or removed. 
+TESTS: List at least FIVE test cases that your program handles smoothly. Do not assume you have a smart user. For example, if the user enters the number of inputs that exist, then your program should not fail if the user enters -1. These tests should show that your program works properly. Given some input, the proper output is computed. Your program handles edge cases. etc.
+1. Jumping over an opposing color anywhere that is legal. a red can jump a black and a black can jump a black 
+2. Can not move backwards as either a red or black and a king piece can move both directions
+3. Getting across the board kings a piece 
+4. Can only move black pieces on blacks turn and vice versa
+5. Can play a full game through
+
+REFLECTIONS: 
+I learned through this project that to create the logic of even a simple game like checkers the logic can get very complex. For this 
+game, each time I moved a piece I had to check if it was for the right team, was moving to a spot that is empty, if it is kinged, if it is trying to jump over another piece.
+The game of checkers is relatively simple and yet the amount of things to keep track of is quite large. To make the most popular games out there, there must be so many checks being made just to move characters, which explains why even the best made games have bugs. 

@@ -1,0 +1,5 @@
+game over. The winner is Black! Thanks for playing
+number of turns: 33
+Pieces remaining: 5
+number of black pieces kinged: 1
+number of red pieces kinged: 1
